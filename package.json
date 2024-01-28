@@ -2,6 +2,7 @@
 {
   "name": "syn-bundler",
   "version": "0.0.1",
+  "license": "MIT",
   "type": "module",
   "main": "dist/syn-bundler.cjs",
   "module": "dist/syn-bundler.mjs",
