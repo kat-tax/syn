@@ -1,0 +1,37 @@
+
+{
+  "name": "syn-bundler",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "dist/syn-bundler.cjs",
+  "module": "dist/syn-bundler.mjs",
+  "types": "dist/index.d.ts",
+  "source": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "test": "vitest watch",
+    "test:ui": "vitest --ui"
+  },
+  "dependencies": {
+    "esbuild-wasm": "^0.20.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.9",
+    "@vitest/ui": "^1.2.2",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.12",
+    "vite-plugin-dts": "^3.7.2",
+    "vite-tsconfig-paths": "^4.3.1",
+    "vitest": "^1.2.2"
+  },
+  "keywords": [
+    "esbuild",
+    "esbuild-wasm",
+    "bundler",
+    "browser-bundler"
+  ]
+}

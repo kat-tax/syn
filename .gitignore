@@ -1,0 +1,17 @@
+# Project
+dist/
+
+# Node
+node_modules/
+
+# Debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# MacOS
+.DS_Store
+*.pem
+
+# Typescript
+*.tsbuildinfo
