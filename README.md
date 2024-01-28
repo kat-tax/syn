@@ -34,7 +34,7 @@ export async function bundle(
 Usage:
 ```ts
 // Import bundler
-import {bundle} from 'sync-bundler';
+import {bundle} from 'syn-bundler';
 
 // Create a Virtual File System
 const files: Map<string, string | Uint8Array> = new Map();
