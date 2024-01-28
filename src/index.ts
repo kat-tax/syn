@@ -10,10 +10,18 @@ import type {BuildOptions} from 'esbuild-wasm';
 
 export type {BuildOptions};
 
+/**
+ * Bundle a React application
+ * @param entry The entry point of the application (e.g. /index.tsx)
+ * @param files Virtual File System containing files needed to bundle the app
+ * @param config ESBuild config https://esbuild.github.io/api/#bundle
+ * @param importMap The import map used to determine external dependencies
+ * @returns a string containing the bundled application code
+ */
 export async function bundle(
   entry: string,
   files: Map<string, string | Uint8Array>,
-  config: BuildOptions,
+  config?: BuildOptions,
   importMap?: Record<string, string>,
 ): Promise<string> {
 
@@ -21,13 +29,13 @@ export async function bundle(
   const compiler = new Compiler();
 
   return await compiler.compile(entry, {
-    ...config,
     define: {'process.env.NODE_ENV': '"development"'},
     inject: ['import-react'],
+    jsx: 'automatic',
     target: 'esnext',
     format: 'esm',
-    jsx: 'automatic',
     jsxDev: true,
+    ...config,
   }, [
     png({resolver}),
     svg({resolver}),

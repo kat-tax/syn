@@ -20,8 +20,8 @@ export default defineConfig({
   ],
   build: {
     lib: {
-      formats: Object.keys(files) as Array<keyof typeof files>,
       entry: resolve(__dirname, pkg.source),
+      formats: Object.keys(files) as Array<keyof typeof files>,
       name: pkg.name.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(''),
       fileName: format => files[format],
     },
