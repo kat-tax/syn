@@ -56,7 +56,7 @@ export default (opts: PluginOptions): Plugin => ({
       return {
         loader: isInject
           ? 'js'
-            : isTS
+          : isTS
             ? 'ts'
             : isTSX
               ? 'tsx'
@@ -64,8 +64,8 @@ export default (opts: PluginOptions): Plugin => ({
         contents: isInject
           ? `export * as React from 'react'`
           : isLinguiMacro
-          ? 'export const Trans = ({children}) => (<span>{__trans__(children)}</span>)'
-          : await Promise.resolve(opts.resolver.resolve(args.path)),
+            ? 'export const Trans = ({children}) => (<span>{__trans__(children)}</span>)'
+            : await Promise.resolve(opts.resolver.resolve(args.path)),
         };
     });
   },
