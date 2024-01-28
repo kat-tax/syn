@@ -1,6 +1,6 @@
 # SYN
 
-> The Bundler for the Browser
+> The Web Bundler for Web Environments
 
 Definition:
 ```ts
